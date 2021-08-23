@@ -22,9 +22,17 @@
         - Reccomendations on potential saving strategies or investment opportunities
     - onChange/onSubmit Form
 
+
+Considerations...
+
 - ToDo List
     - List of techniques that user will implement in writing
 
 
 - Bill/Savings Organizer
     - chart/graph where they input data that shows their financial status
+
+
+- Social Networking?
+    - share your financial goals and strategies with others.
+    - Interact with other profiles through likes and comments. 
