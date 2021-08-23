@@ -1,0 +1,14 @@
+{
+  "Information": [
+  {
+      "id": 1,
+      "name": "Fred",
+      "age": 30,
+      "income": 3000,
+      "rent": 1000,
+      "living expenses": 200,
+      "bills": 300,
+      "entertainment": 200
+  }
+  ]
+}
