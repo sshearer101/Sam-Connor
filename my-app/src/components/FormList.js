@@ -14,7 +14,7 @@ function FormList() {
     useEffect(() => {
         fetch("http://localhost:3000/Information")
         .then (res => res.json())
-        .then (setFormData)
+        .then (cons(setFormData))
       }, [])
     
     function handleSubmit(e){
