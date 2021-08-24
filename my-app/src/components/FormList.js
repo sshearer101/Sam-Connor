@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 
-function FormList({ addProfile, getNextId }) {
+function FormList({ addProfile, getNextId}) {
     const [formData, setFormData] = useState({
-        id: getNextId(),
+        
         name: "",
         age: "",
         income: "",
