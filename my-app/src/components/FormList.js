@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 
 
-function FormList({ addProfile }) {
+function FormList({ addProfile, getNextId }) {
     const [formData, setFormData] = useState({
+        id: getNextId(),
         name: "",
         age: "",
         income: "",
-        rent: "",
+        housing: "",
         living_expenses: "",
         bills: "",
         entertainment: ""
     })
+
 
     function handleSubmit(e){
         e.preventDefault();
@@ -64,7 +66,7 @@ function FormList({ addProfile }) {
                 onChange={handleChange}
             />
 
-            <label htmlFor="housing">Rent</label>
+            <label htmlFor="housing">Housing</label>
             <input
                 type="text"
                 id="housing"
