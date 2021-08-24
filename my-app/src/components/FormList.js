@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function FormList() {
+
+function FormList({ addProfile }) {
     const [formData, setFormData] = useState({
         name: "",
         age: "",
@@ -11,16 +12,19 @@ function FormList() {
         entertainment: ""
     })
 
-    useEffect(() => {
-        fetch("http://localhost:3000/Information")
-        .then (res => res.json())
-        .then (cons(setFormData))
-      }, [])
-    
     function handleSubmit(e){
         e.preventDefault();
+      addProfile(formData)
     }
 
+
+    // useEffect(() => {
+    //     fetch("http://localhost:3000/Information")
+    //     .then (res => res.json())
+    //     .then (setFormData)
+    //   }, [])
+    
+  
     function handleChange(e){
         const key = e.target.id
         const value = e.target.value
@@ -60,11 +64,11 @@ function FormList() {
                 onChange={handleChange}
             />
 
-            <label htmlFor="rent">Rent</label>
+            <label htmlFor="housing">Rent</label>
             <input
                 type="text"
-                id="Rent"
-                value={formData.rent}
+                id="housing"
+                value={formData.housing}
                 onChange={handleChange}
             />
 
@@ -84,14 +88,14 @@ function FormList() {
                 onChange={handleChange}
             />
 
-<label htmlFor="entertainment">Entertainment</label>
+            <label htmlFor="entertainment">Entertainment</label>
             <input
                 type="text"
                 id="entertainment"
                 value={formData.entertainment}
                 onChange={handleChange}
             />
-
+        <button type="submit">Add Profile</button>
         </form>
 
     )

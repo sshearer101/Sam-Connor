@@ -11,9 +11,9 @@
 
 - User will be able to select their desired saving's strategy
     - Options: 
-        - Low savings 
+        - Low savings
         - Medium savings
-        - High savings
+        - High savings 
     - onClick
 
 - User will be able to input data on a form regarding their finances (income and expenses)
