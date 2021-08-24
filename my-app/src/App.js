@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css';
 import React, { useState, useEffect } from "react";
 import FormList from './components/FormList';
 import FormCard from './components/FormCard';
@@ -9,9 +10,10 @@ function App() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3000/Information")
+    fetch("http://localhost:3000/information")
       .then(res => res.json())
-      .then(data => console.log(setData(data)))
+      //.then(data => console.log(setData(data)))
+      .then(data => setData(data))
   }, [])
 
   const getNextId = ((id) => () => ++id)(2)

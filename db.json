@@ -1,12 +1,12 @@
 {
-  "Information": [
+  "information": [
     {
       "id": 1,
       "name": "",
       "age": "",
       "income": "",
       "rent": "",
-      "living expenses": "",
+      "living_expenses": "",
       "bills": "",
       "entertainment": ""
     }
