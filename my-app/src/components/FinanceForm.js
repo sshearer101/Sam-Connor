@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-
-function FinanceForm({ addProfile }) {
+function FinanceForm({ onAddProfile }) {
     const [formData, setFormData] = useState({
 
-        id: "",
+        // id: "",
         name: "",
         age: "",
         income: "",
@@ -14,37 +13,30 @@ function FinanceForm({ addProfile }) {
         entertainment: ""
     })
 
-    // const formData = {
-    //     name,
-    //     about,
-    //     phase,
-    //     link,
-    //     image,
-    // };
-
-
     function handleSubmit(e) {
         e.preventDefault();
-        addProfile(formData)
+        //console.log(onAddProfile(formData))
+        console.log(formData)
+
     }
-
-
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/Information")
-    //     .then (res => res.json())
-    //     .then (setFormData)
-    //   }, [])
-
 
     function handleChange(e) {
         const key = e.target.id
         const value = e.target.value
-
-        setFormData({
-            ...formData,
-            [key]: value
-        })
+        setFormData({...formData, [key]: value})
     }
+
+    // fetch("http://localhost:3000/information", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formData),
+    // })
+    //     .then((r) => r.json())
+    //     .then((newProfile) => {
+    //         onAddProfile(newProfile);
+    //     });
 
 
 

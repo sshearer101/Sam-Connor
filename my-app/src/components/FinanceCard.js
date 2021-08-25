@@ -1,6 +1,8 @@
 import React from "react";
-function FormCard({ userInfo }) {
-    const { id, name, age, income, housing, living_expenses, bills, entertainment } = userInfo
+
+function FinanceCard({ name, age, income, housing, living_expenses, bills, entertainment }) {
+    
+    //const { name, age, income, housing, living_expenses, bills, entertainment } = userInfo
 
     //Functions to display
     const expenses = housing + living_expenses + bills + entertainment
@@ -28,4 +30,4 @@ function FormCard({ userInfo }) {
     )
 }
 
-export default FormCard;
+export default FinanceCard;

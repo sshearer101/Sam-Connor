@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import FinanceForm from './components/FinanceForm';
 import FinanceCard from './components/FinanceCard';
 import Header from './components/Header';
+// import Login from './components/Login';
 
 function App() {
 
   const [data, setData] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3000/information")
@@ -17,50 +18,48 @@ function App() {
       .then(data => setData(data))
   }, [])
 
-  function handleAddUser(newUser) {
-    const newUserArray = [newUser, ...data];
-    setUser(newUserArray);
-  }
+  // function handleAddProfile(newUser) {
+  //   const newUserArray = [newUser, ...data];
+  //   setUser(newUserArray);
+  // }
 
-  const formData = data.map(formInfo => {
-    return (
-      <FinanceForm
-        key={formInfo.id}
-        name={formInfo.name}
-        age={formInfo.age}
-        income={formInfo.income}
-        housing={formInfo.housing}
-        living_expenses={formInfo.living_expenses}
-        bills={formInfo.bills}
-        entertainment={formInfo.entertainment}
-      />
-    )
-  });
-
-  // function addProfile(dataProfile) {
+  // function handleAddProfile(dataProfile) {
+  //   const newProfileArray = []
   //   setData([...data, dataProfile])
   // }
 
+  // function handleAddProject(newProject) {
+  //   const newProjectArray = [newProject, ...projects];
+  //   setProjects(newProjectArray);
+  // }
 
   return (
     <>
       <Header />
-      <FinanceForm  />
+      {/* <CreateUser /> */}
+      {/* <FinanceForm  onAddProfile={handleAddProfile}/> */}
+      <FinanceForm />
       <FinanceCard />
-      <main>{formData}</main>
+      {/* <FinanceCard /> */}
+      {/* <main>{formData}</main> */}
     </>
   );
 }
 
-// return (
-//   <div>
-//     <Header />
-//     <CreateUser />
-//     <FinanceForm />
-//     <FinanceCard />
-//   </div>
-// );
-
-
-
 export default App;
+
+
+  // const formData = data.map(formInfo => {
+  //   return (
+  //     <FinanceForm
+  //       key={formInfo.id}
+  //       name={formInfo.name}
+  //       age={formInfo.age}
+  //       income={formInfo.income}
+  //       housing={formInfo.housing}
+  //       living_expenses={formInfo.living_expenses}
+  //       bills={formInfo.bills}
+  //       entertainment={formInfo.entertainment}
+  //     />
+  //   )
+  // });
