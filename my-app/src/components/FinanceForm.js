@@ -16,7 +16,7 @@ function FinanceForm({ userInfo, onAddProfile }) {
     function handleSubmit(e) {
         e.preventDefault();
         //console.log(onAddProfile(formData))
-        console.log(formData)
+        // console.log(formData)
         fetch("http://localhost:3000/information", {
             method: "POST",
             headers: {
@@ -28,7 +28,7 @@ function FinanceForm({ userInfo, onAddProfile }) {
             .then((newProfile) => {
                 onAddProfile(newProfile);
             });
-    }
+     }
 
     function handleChange(e) {
         const key = e.target.id

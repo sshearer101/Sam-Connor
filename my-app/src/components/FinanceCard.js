@@ -1,12 +1,12 @@
 import React from "react";
 
-function FinanceCard({ userInfo }) {
+function FinanceCard({ userInfo, onAddProfile }) {
     
-    const { name, age, income, housing, living_expenses, bills, entertainment } = userInfo
-
+     const { name, age, income, housing, living_expenses, bills, entertainment } = userInfo
+            //destructure doesn't work atm
+    // console.log(userInfo)
     //Functions to display
     //const expenses = housing + living_expenses + bills + entertainment
-
 
     //Returns Output. Returns Advice
 
@@ -16,9 +16,13 @@ function FinanceCard({ userInfo }) {
             //Green Sitting good. Recommend investing to grow wealth
                     //Younger: Investing
                     //Older: Maybe enjoy life - Vacation etc.
+
     return (
         <div className="form-card">
+            {userInfo.map(user => console.log(user))}
 
+
+            {/* {userInfo} */}
             {/* <h2>{name}</h2>
             <h2>{age}</h2>
             <h2>{income}</h2>

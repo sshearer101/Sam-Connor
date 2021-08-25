@@ -14,35 +14,48 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/information")
       .then(res => res.json())
-      //.then(data => console.log(setData(data)))
+      //.then(data => console.log(setUserInfo(data)))
       .then(data => setUserInfo(data))
+      //.then(data => console.log(data))
   }, [])
 
   function handleAddProfile(newUser) {
     const newUserArray = [newUser, ...userInfo];
     setUserInfo(newUserArray);
   }
-
-  function handleAddProfile(newProfile) {
-    const newProfileArray = [newProfile, ...userInfo];
-    setUserInfo([...userInfo, newProfile])
-    //setUserInfo(newProfileArray);
+  
+  function enlistBots(id) {
+    //console.log(id)
+    setUserInfo(userInfo.map(user => user.id === id ? { ...user, enlisted: true } : user));
   }
 
   return (
     <>
       <Header />
-      {/* <CreateUser /> */}
+      {/* <Login /> */}
       <FinanceForm  userInfo={userInfo} onAddProfile={handleAddProfile}/>
-      {/* <FinanceForm /> */}
+      <FinanceCard userInfo={userInfo.filter(user => user.enlisted)} userInfo={userInfo} onAddProfile={handleAddProfile} />
       <FinanceCard userInfo={userInfo} onAddProfile={handleAddProfile}/>
-      {/* <FinanceCard /> */}
-      {/* <main>{formData}</main> */}
+      
     </>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // const formData = data.map(formInfo => {
