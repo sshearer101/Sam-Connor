@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 
-function FormList({ addProfile, getNextId }) {
+function FinanceForm({ addProfile }) {
     const [formData, setFormData] = useState({
 
+        id: "",
         name: "",
         age: "",
         income: "",
@@ -12,6 +13,14 @@ function FormList({ addProfile, getNextId }) {
         bills: "",
         entertainment: ""
     })
+
+    // const formData = {
+    //     name,
+    //     about,
+    //     phase,
+    //     link,
+    //     image,
+    // };
 
 
     function handleSubmit(e) {
@@ -42,7 +51,7 @@ function FormList({ addProfile, getNextId }) {
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit} >
-                <h1>Create an Account</h1>
+                <h1>Get Your Finance Advice!</h1>
                 <label htmlFor="name">Name </label>
                 <input
                     type="text"
@@ -108,4 +117,4 @@ function FormList({ addProfile, getNextId }) {
 
 }
 
-export default FormList;
+export default FinanceForm;

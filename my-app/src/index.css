@@ -23,6 +23,18 @@ code {
     background-color: cornflowerblue;
 } */
 
+.form-card {
+    width: 40%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5.0rem;
+    background-color: cornflowerblue;
+
+}
+
 form {
     width: 40%;
     margin: 1rem;
