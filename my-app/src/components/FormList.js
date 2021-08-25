@@ -40,18 +40,21 @@ function FormList({ addProfile, getNextId}) {
 
 
     return (
+        <div className="form-container"> 
         <form onSubmit={handleSubmit} >
             <h1>Create an Account</h1>
-            <label htmlFor="name">Name</label>
+            {/* <label htmlFor="name">Name</label>
             <input
+                className="input-container"
                 type="text"
                 id="name"
                 value={formData.name}
                 onChange={handleChange}
-            />
+            /> */}
 
             <label htmlFor="age">Age</label>
             <input
+                className="input-container"
                 type="text"
                 id="age"
                 value={formData.age}
@@ -60,6 +63,7 @@ function FormList({ addProfile, getNextId}) {
 
             <label htmlFor="income">Income</label>          
             <input
+                className="input-container"
                 type="text"
                 id="income"
                 value={formData.income}
@@ -68,6 +72,7 @@ function FormList({ addProfile, getNextId}) {
 
             <label htmlFor="housing">Housing</label>
             <input
+                className="input-container"
                 type="text"
                 id="housing"
                 value={formData.housing}
@@ -76,6 +81,7 @@ function FormList({ addProfile, getNextId}) {
 
             <label htmlFor="living_expenses">Living Expenses</label>
             <input
+                className="input-container"
                 type="text"
                 id="living_expenses"
                 value={formData.living_expenses}
@@ -99,7 +105,7 @@ function FormList({ addProfile, getNextId}) {
             />
         <button type="submit">Add Profile</button>
         </form>
-
+    </div>
     )
 
 }

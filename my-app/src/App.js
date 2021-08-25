@@ -1,8 +1,10 @@
 import './App.css';
+import './index.css';
 import React, { useState, useEffect } from "react";
 import FormList from './components/FormList';
 import FormCard from './components/FormCard';
 import Header from './components/Header';
+
 
 function App() {
 
@@ -11,7 +13,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/Information")
       .then(res => res.json())
-      .then(data => console.log(setData(data)))
+      .then(setData)
   }, [])
 
   const getNextId = ((id) => () => ++id)(2)

@@ -1,33 +1,37 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import Login from './Login'
 
-function Header (){
+function Header() {
 
-const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null)
 
 
-function handleLoginClick(){
-    setUser({
-        id: 1,
-        username: "John"
-    })
-}
 
-function handleLogoutClick(){
-    setUser(null)
-}
+    function handleLoginClick() {
+        setUser(true)
 
-return (
-    <header>
-        <h1> Your Financial Planner</h1>
-        <nav>
-            {user ? (
-                <button onClick={handleLoginClick}>Login</button>
-            ) : (
-                <button onClick={handleLogoutClick}>Logout</button>
-            )}
-        </nav>
-    </header>
-)
+    }
+
+
+    function handleLogoutClick() {
+        setUser(null)
+    }
+
+    return (
+        <header>
+            <h1> Your Financial Planner</h1>
+            <nav>
+                {user ? (
+                    <button onClick={handleLogoutClick}>Logout</button>
+                ) : (
+                    <div>
+                        <Login />
+                        <button onClick={handleLoginClick}>Login </button>
+                    </div>
+                )}
+            </nav>
+        </header>
+    )
 }
 
 export default Header;
