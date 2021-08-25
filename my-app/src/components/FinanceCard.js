@@ -1,11 +1,11 @@
 import React from "react";
 
-function FinanceCard({ name, age, income, housing, living_expenses, bills, entertainment }) {
+function FinanceCard({ userInfo }) {
     
-    //const { name, age, income, housing, living_expenses, bills, entertainment } = userInfo
+    const { name, age, income, housing, living_expenses, bills, entertainment } = userInfo
 
     //Functions to display
-    const expenses = housing + living_expenses + bills + entertainment
+    //const expenses = housing + living_expenses + bills + entertainment
 
 
     //Returns Output. Returns Advice
@@ -18,14 +18,15 @@ function FinanceCard({ name, age, income, housing, living_expenses, bills, enter
                     //Older: Maybe enjoy life - Vacation etc.
     return (
         <div className="form-card">
-            <h2>{name}</h2>
+
+            {/* <h2>{name}</h2>
             <h2>{age}</h2>
             <h2>{income}</h2>
             <h2>{housing}</h2>
             <h2>{living_expenses}</h2>
             <h2>{bills}</h2>
-            <h2>{entertainment}</h2>
-            <h3> {{income} - expenses} </h3>
+            <h2>{entertainment}</h2> */}
+            {/* <h3> {{income} - expenses} </h3> */}
         </div>
     )
 }

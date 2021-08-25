@@ -8,38 +8,34 @@ import Header from './components/Header';
 
 function App() {
 
-  const [data, setData] = useState([]);
+  const [userInfo, setUserInfo] = useState([]);
   // const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:3000/information")
       .then(res => res.json())
       //.then(data => console.log(setData(data)))
-      .then(data => setData(data))
+      .then(data => setUserInfo(data))
   }, [])
 
-  // function handleAddProfile(newUser) {
-  //   const newUserArray = [newUser, ...data];
-  //   setUser(newUserArray);
-  // }
+  function handleAddProfile(newUser) {
+    const newUserArray = [newUser, ...userInfo];
+    setUserInfo(newUserArray);
+  }
 
-  // function handleAddProfile(dataProfile) {
-  //   const newProfileArray = []
-  //   setData([...data, dataProfile])
-  // }
-
-  // function handleAddProject(newProject) {
-  //   const newProjectArray = [newProject, ...projects];
-  //   setProjects(newProjectArray);
-  // }
+  function handleAddProfile(newProfile) {
+    const newProfileArray = [newProfile, ...userInfo];
+    setUserInfo([...userInfo, newProfile])
+    //setUserInfo(newProfileArray);
+  }
 
   return (
     <>
       <Header />
       {/* <CreateUser /> */}
-      {/* <FinanceForm  onAddProfile={handleAddProfile}/> */}
-      <FinanceForm />
-      <FinanceCard />
+      <FinanceForm  userInfo={userInfo} onAddProfile={handleAddProfile}/>
+      {/* <FinanceForm /> */}
+      <FinanceCard userInfo={userInfo} onAddProfile={handleAddProfile}/>
       {/* <FinanceCard /> */}
       {/* <main>{formData}</main> */}
     </>

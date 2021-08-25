@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function FinanceForm({ onAddProfile }) {
+function FinanceForm({ userInfo, onAddProfile }) {
     const [formData, setFormData] = useState({
 
         // id: "",
@@ -17,28 +17,24 @@ function FinanceForm({ onAddProfile }) {
         e.preventDefault();
         //console.log(onAddProfile(formData))
         console.log(formData)
-
+        fetch("http://localhost:3000/information", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((r) => r.json())
+            .then((newProfile) => {
+                onAddProfile(newProfile);
+            });
     }
 
     function handleChange(e) {
         const key = e.target.id
         const value = e.target.value
-        setFormData({...formData, [key]: value})
+        setFormData({ ...formData, [key]: value })
     }
-
-    // fetch("http://localhost:3000/information", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(formData),
-    // })
-    //     .then((r) => r.json())
-    //     .then((newProfile) => {
-    //         onAddProfile(newProfile);
-    //     });
-
-
 
     return (
         <div className="form-container">
