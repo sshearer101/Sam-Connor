@@ -1,6 +1,6 @@
 {
   "Information": [
-  {
+    {
       "id": 1,
       "name": "George",
       "age": 30,
@@ -8,7 +8,6 @@
       "occupation": "Software Developer",
       "interests": "computers",
       "profile_pic": "https://imgflip.com/s/meme/Matrix-Morpheus.jpg"
-            
-  }
+    }
   ]
 }

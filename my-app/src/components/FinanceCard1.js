@@ -11,8 +11,15 @@ function FinanceCard({
     
 }) {
 
+
+
+
+    // const { name, age, income, housing, living_expenses, bills, entertainment } = data
+
     const [likes, setLikes] = useState(0)
     const [comments, setComments] = useState("")
+
+
 
     function increaseLikes() {
         setLikes(likes + 1)

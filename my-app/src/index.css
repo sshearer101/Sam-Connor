@@ -14,7 +14,7 @@ code {
 
 form {
   width: 40%;
-  margin: 1rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,12 +24,28 @@ form {
 }
 
 .card {
-  width: 20%;
-  margin: 1rem;
+  width: 40%;
+  margin: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   padding: 5.0rem;
 }
 
+.like-button{
+  width: 40%;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+
+.send-likes{
+  margin: auto;
+}
+
+.card-info{
+  margin: auto;
+  align-items: left;
+}

@@ -2,7 +2,7 @@ import './App.css';
 import './index.css';
 import React, { useState, useEffect } from "react";
 import FinanceForm from './components/FinanceForm';
-import FinanceCard from './components/FinanceCard';
+import FinanceList from './components/FinanceList';
 import Header from './components/Header';
 
 
@@ -19,20 +19,6 @@ function App() {
 
 
 
-  const formData = data.map(formInfo => {
-    return (
-      <FinanceCard
-        key={formInfo.id}
-        name={formInfo.name}
-        age={formInfo.age}
-        income={formInfo.income}
-        occupation={formInfo.occupation}
-        interests={formInfo.interests}
-        profile_pic={formInfo.profile_pic}
-      />
-    )
-  });
-
   function addProfile(dataProfile) {
     setData([...data, dataProfile])
   }
@@ -47,8 +33,7 @@ function App() {
       <div className="FormList">
         < Header />
         < FinanceForm addProfile={addProfile}  />
-        {/* < FinanceCard onCommentSubmit={handleSubmit}/> */}
-       <main>{formData}</main>
+        < FinanceList data={data}/>
       </div>
   );
 }
