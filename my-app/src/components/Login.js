@@ -6,7 +6,6 @@ function Login(){
 
     const [loginInfo, setLoginInfo] = useState({
         id: "",
-        name: "",
         username: "",
         password: "",
         completed: "false",
@@ -37,14 +36,7 @@ function Login(){
     return(
         <div>
             <h1>Create your account</h1>
-            <label htmlFor="name">Name</label>
-            <input
-                className="input-container"
-                type="text"
-                id="name"
-                value={loginInfo.name}
-                onChange={handleChange}
-            />
+      
 
             <label htmlFor="username">Username</label>
             <input

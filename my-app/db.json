@@ -4,12 +4,11 @@
       "id": 1,
       "name": "George",
       "age": 30,
-      "income": 3000,
-      "housing": 1000,
-      "living_expenses": 200,
-      "bills": 300,
-      "entertainment": 200
-      
+      "income": 80000,
+      "occupation": "Software Developer",
+      "interests": "computers",
+      "profile_pic": "https://imgflip.com/s/meme/Matrix-Morpheus.jpg"
+            
   }
   ]
 }

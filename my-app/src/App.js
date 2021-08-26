@@ -9,6 +9,7 @@ import Header from './components/Header';
 function App() {
 
   const [data, setData] = useState([])
+  // const [comments, setComments] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:3000/Information")
@@ -25,25 +26,28 @@ function App() {
         name={formInfo.name}
         age={formInfo.age}
         income={formInfo.income}
-        housing={formInfo.housing}
-        living_expenses={formInfo.living_expenses}
-        bills={formInfo.bills}
-        entertainment={formInfo.entertainment}
+        occupation={formInfo.occupation}
+        interests={formInfo.interests}
+        profile_pic={formInfo.profile_pic}
       />
     )
   });
-
 
   function addProfile(dataProfile) {
     setData([...data, dataProfile])
   }
 
 
+  // function handleSubmit(comment){
+  //   setComments([...comments, comment])
+  // }
+
 
   return (
       <div className="FormList">
         < Header />
         < FinanceForm addProfile={addProfile}  />
+        {/* < FinanceCard onCommentSubmit={handleSubmit}/> */}
        <main>{formData}</main>
       </div>
   );

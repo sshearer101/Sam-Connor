@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <header>
-            <h1> Your Financial Planner</h1>
+            <h1> Socialize Financially! </h1>
             <nav>
                 {user ? (
                     <button onClick={handleLogoutClick}>Logout</button>

@@ -7,24 +7,27 @@ function FinanceForm({ addProfile }) {
         name: "",
         age: "",
         income: "",
-        housing: "",
-        living_expenses: "",
-        bills: "",
+        occupation: "",
+        interests: "",
+        profile_pic: "",
         entertainment: ""
     })
 
 
     function handleSubmit(e){
         e.preventDefault();
-      addProfile(formData)
-    }
-
-
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/Information")
-    //     .then (res => res.json())
-    //     .then (setFormData)
-    //   }, [])
+        fetch("http://localhost:3000/information", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((r) => r.json())
+            .then((formData) => {
+                addProfile(formData);
+            });
+     }
     
   
     function handleChange(e){
@@ -42,15 +45,16 @@ function FinanceForm({ addProfile }) {
     return (
         <div className="form-container"> 
         <form onSubmit={handleSubmit} >
-            <h1>Create an Account</h1>
-            {/* <label htmlFor="name">Name</label>
+            <h1>Fill out your Profile!</h1>
+
+            <label htmlFor="name">Name</label>
             <input
                 className="input-container"
                 type="text"
                 id="name"
                 value={formData.name}
                 onChange={handleChange}
-            /> */}
+            />
 
             <label htmlFor="age">Age</label>
             <input
@@ -61,7 +65,7 @@ function FinanceForm({ addProfile }) {
                 onChange={handleChange}
             />
 
-            <label htmlFor="income">Income</label>          
+            <label htmlFor="income">Yearly Income</label>          
             <input
                 className="input-container"
                 type="text"
@@ -70,39 +74,39 @@ function FinanceForm({ addProfile }) {
                 onChange={handleChange}
             />
 
-            <label htmlFor="housing">Housing</label>
+            <label htmlFor="occupation">Occupation</label>
             <input
                 className="input-container"
                 type="text"
-                id="housing"
-                value={formData.housing}
+                id="occupation"
+                value={formData.occupation}
                 onChange={handleChange}
             />
 
-            <label htmlFor="living_expenses">Living Expenses</label>
+            <label htmlFor="interests">Interests</label>
             <input
                 className="input-container"
                 type="text"
-                id="living_expenses"
-                value={formData.living_expenses}
+                id="interests"
+                value={formData.interests}
                 onChange={handleChange}
             />
 
-            <label htmlFor="bills">Bills</label>
+            <label htmlFor="profile_pic">Profile Pic</label>
             <input
                 type="text"
-                id="bills"
-                value={formData.bills}
+                id="profile_pic"
+                value={formData.profile_pic}
                 onChange={handleChange}
             />
-
+{/* 
             <label htmlFor="entertainment">Entertainment</label>
             <input
                 type="text"
                 id="entertainment"
                 value={formData.entertainment}
-                onChange={handleChange}
-            />
+                onChange={handleChange} /> */}
+         
         <button type="submit">Add Profile</button>
         </form>
     </div>
