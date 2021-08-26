@@ -1,6 +1,6 @@
 import FinanceCard from "./FinanceCard";
 
-function FinanceList({ data }) {
+function FinanceList({ data, Link, Switch, Route }) {
     return (
         <div className="card-list">
             <h2 className="component-name">Finance Profiles</h2>
@@ -8,6 +8,7 @@ function FinanceList({ data }) {
 
             {[...data].map(formInfo => {
                 return (
+               
                     <FinanceCard
                         key={formInfo.id}
                         name={formInfo.name}
@@ -17,6 +18,7 @@ function FinanceList({ data }) {
                         interests={formInfo.interests}
                         profile_pic={formInfo.profile_pic}
                     />
+                
                 );
             })}
         </div>

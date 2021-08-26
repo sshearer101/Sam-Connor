@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CommentCard from "./CommentCard"
 
 function FinanceCard({
     id,
@@ -8,7 +9,7 @@ function FinanceCard({
     occupation,
     interests,
     profile_pic,
-    
+
 }) {
 
     const [likes, setLikes] = useState(0)
@@ -33,13 +34,9 @@ function FinanceCard({
     //       });
     //     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        setComments(...comments, e)
-    }
 
-    function addComment(comment) {
-        setComments(...comments, comment)   
+    function addComment(content) {
+        setComments(...comments, content)
     }
 
     return (
@@ -55,24 +52,28 @@ function FinanceCard({
             <button onClick={increaseLikes} className="like-button" id="like-button"> 👍 </button>
             <button onClick={decreaseLikes} className="like-button" id="like-button"> 👎 </button>
             <span id="send-likes" className="send-likes"> {likes} Profile Likes</span>
-            <form >
+
+            <div className="comment-form">
                 <input
-                    className="input-container"
-                    type="text"
-                    placeholder="comment on profile"
-                    value={comments}
                     onChange={(e) => setComments(e.target.value)}
+                    className="comment-input"
+                    type="text"
+                    value={comments}
+                    placeholder="Comment on profile"
                 />
-                <button 
-                    onSubmit={handleSubmit} 
-                    type="submit">
-                    Submit
+                <button
+                    className="comment-button"
+                    onClick={() => {
+                        addComment(comments);
+                        setComments('');
+                    }}
+                >
+                    Post
                 </button>
-
-            </form>
-
+            </div>
+            < CommentCard comments={setComments}/>
         </div>
-
+    
     )
 
 }
@@ -80,3 +81,19 @@ function FinanceCard({
 export default FinanceCard
 
 
+
+// <form >
+// <input
+//     className="input-container"
+//     type="text"
+//     placeholder="comment on profile"
+//     value={comments}
+//     onChange={(e) => setComments(e.target.value)}
+// />
+// <button 
+//     onSubmit={handleSubmit} 
+//     type="submit">
+//     Submit
+// </button>
+
+// </form>

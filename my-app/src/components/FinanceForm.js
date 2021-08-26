@@ -10,7 +10,6 @@ function FinanceForm({ addProfile }) {
         occupation: "",
         interests: "",
         profile_pic: "",
-        entertainment: ""
     })
 
 
