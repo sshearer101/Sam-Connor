@@ -1,156 +1,33 @@
 {
   "information": [
     {
-      "id": "",
-      "name": "",
+      "id": 1,
+      "name": "George",
+      "age": 30,
+      "income": 80000,
+      "occupation": "Software Developer",
+      "interests": "computers",
+      "profile_pic": "https://imgflip.com/s/meme/Matrix-Morpheus.jpg"
+    },
+    {
+      "name": "connor",
       "age": "",
       "income": "",
-      "housing": "",
-      "living expenses": "",
-      "debt": "",
-      "groceries": "",
-      "insurnace": "",
-      "entertainment": ""
+      "occupation": "",
+      "interests": "",
+      "profile_pic": "",
+      "entertainment": "",
+      "id": 2
     },
     {
       "name": "sdf",
-      "age": "sdf",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
-      "entertainment": "",
-      "id": "WkC2vwz"
-    },
-    {
-      "name": "",
       "age": "",
       "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
+      "occupation": "",
+      "interests": "",
+      "profile_pic": "",
       "entertainment": "",
-      "id": "Gb456uE"
-    },
-    {
-      "name": "",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
-      "entertainment": "",
-      "id": "RReMkLx"
-    },
-    {
-      "name": "",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
-      "entertainment": "",
-      "id": "lPcjOLQ"
-    },
-    {
-      "name": "",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
-      "entertainment": "",
-      "id": "8QxNwJo"
-    },
-    {
-      "name": "Connor",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
-      "entertainment": "",
-      "id": "sU_TCgw"
-    },
-    {
-      "name": "Connor",
-      "age": "32",
-      "income": "4500",
-      "housing": "300",
-      "living_expenses": "200",
-      "bills": "100",
-      "entertainment": "100",
-      "id": "3GsFvbt"
-    },
-    {
-      "name": "",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "sdfdsf",
-      "entertainment": "",
-      "id": "GGRywUt"
-    },
-    {
-      "name": "sdfdsf",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "",
-      "entertainment": "",
-      "id": "JA6tdSx"
-    },
-    {
-      "name": "sdfdsf",
-      "age": "fdsf",
-      "income": "sdf",
-      "housing": "sdf",
-      "living_expenses": "sdf",
-      "bills": "sdf",
-      "entertainment": "sdfdsf",
-      "id": "VesQP6N"
-    },
-    {
-      "name": "4545",
-      "age": "2354325",
-      "income": "234324234",
-      "housing": "234324",
-      "living_expenses": "23424",
-      "bills": "2424",
-      "entertainment": "23424",
-      "id": "vPxjAWc"
-    },
-    {
-      "name": "4545",
-      "age": "2354325",
-      "income": "234324234",
-      "housing": "234324",
-      "living_expenses": "23424",
-      "bills": "2424",
-      "entertainment": "23424",
-      "id": "IFGXO4l"
-    },
-    {
-      "name": "4545",
-      "age": "2354325",
-      "income": "234324234",
-      "housing": "234324",
-      "living_expenses": "23424",
-      "bills": "2424",
-      "entertainment": "23424",
-      "id": "xTP52O9"
-    },
-    {
-      "name": "",
-      "age": "",
-      "income": "",
-      "housing": "",
-      "living_expenses": "",
-      "bills": "dsfdsf",
-      "entertainment": "",
-      "id": "ofLISQY"
+      "id": 3
     }
   ]
 }

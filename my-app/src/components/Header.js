@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
+import Login from './Login'
 
 function Header() {
 
     const [user, setUser] = useState(null)
 
-
     function handleLoginClick() {
-        setUser({
-            id: 1,
-            username: "John"
-        })
+        setUser(true)
     }
 
     function handleLogoutClick() {
@@ -18,13 +15,18 @@ function Header() {
 
     return (
         <header>
-            <h1>Your Financial Planner</h1>
+            <h1> Socialize Financially! </h1>
             <nav>
-                {user ? (
-                    <button onClick={handleLoginClick}>Login</button>
-                ) : (
-                    <button onClick={handleLogoutClick}>Logout</button>
-                )}
+                <div className="log-buttons">
+                    {user ? (
+                        <button onClick={handleLogoutClick}>Logout</button>
+                    ) : (
+                        <div>
+                            <Login />
+                            <button onClick={handleLoginClick}>Login </button>
+                        </div>
+                    )}
+                </div>
             </nav>
         </header>
     )

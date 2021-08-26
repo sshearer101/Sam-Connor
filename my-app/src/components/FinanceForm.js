@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 
-function FinanceForm({ userInfo, onAddProfile }) {
+
+function FinanceForm({ addProfile }) {
     const [formData, setFormData] = useState({
 
-        // id: "",
         name: "",
         age: "",
         income: "",
-        housing: "",
-        living_expenses: "",
-        bills: "",
-        entertainment: ""
+        occupation: "",
+        interests: "",
+        profile_pic: ""
     })
+
 
     function handleSubmit(e) {
         e.preventDefault();
-        //console.log(onAddProfile(formData))
-        // console.log(formData)
         fetch("http://localhost:3000/information", {
             method: "POST",
             headers: {
@@ -25,82 +23,119 @@ function FinanceForm({ userInfo, onAddProfile }) {
             body: JSON.stringify(formData),
         })
             .then((r) => r.json())
-            .then((newProfile) => {
-                onAddProfile(newProfile);
+            .then((formData) => {
+                addProfile(formData);
             });
-     }
+    }
+
 
     function handleChange(e) {
         const key = e.target.id
         const value = e.target.value
-        setFormData({ ...formData, [key]: value })
+
+        setFormData({
+            ...formData,
+            [key]: value
+        })
     }
+    // function handleSubmit(event) {
+    //     let newId = parseInt(cards[cards.length - 1].id) + 1;
+    //     // let newId = cards.length + 1;
+
+    //     // Prevent default form submission behavior
+    //     event.preventDefault();
+
+    //     // Create newCard JS object with formData and generate
+    //     // a unique ID for each new object
+    //     const newCard = {
+    //         id: newId,
+    //         title: formData.title,
+    //         content: formData.content
+    //         // ...formData
+    //     }
+
+    //     // Use handleAddCard from props to add the newCard JS object
+    //     // to the existing array of Card objects (cards)
+    //     addProfile(newCard);
+
+    //     // Clear out input values upon form submission using formDataSetter
+    //     setFormData({
+    //         // key / value pairs to update
+    //         title: "",
+    //         content: ""
+    //     });
+    // }
+
+
 
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit} >
-                <h1>Get Your Finance Advice!</h1>
-                <label htmlFor="name">Name </label>
+                <h1>Fill out your Profile!</h1>
+
+                <label htmlFor="name">Name</label>
                 <input
+                    className="input-container"
                     type="text"
                     id="name"
                     value={formData.name}
                     onChange={handleChange}
                 />
-                <br></br>
-                <label htmlFor="age">Age </label>
+
+                <label htmlFor="age">Age</label>
                 <input
+                    className="input-container"
                     type="text"
                     id="age"
                     value={formData.age}
                     onChange={handleChange}
                 />
-                <br></br>
-                <label htmlFor="income">Income </label>
+
+                <label htmlFor="income">Yearly Income</label>
                 <input
+                    className="input-container"
                     type="text"
                     id="income"
                     value={formData.income}
                     onChange={handleChange}
                 />
-                <br></br>
-                <label htmlFor="housing">Housing </label>
+
+                <label htmlFor="occupation">Occupation</label>
                 <input
+                    className="input-container"
                     type="text"
-                    id="housing"
-                    value={formData.housing}
+                    id="occupation"
+                    value={formData.occupation}
                     onChange={handleChange}
                 />
-                <br></br>
-                <label htmlFor="living_expenses">Living Expenses </label>
+
+                <label htmlFor="interests">Interests</label>
                 <input
+                    className="input-container"
                     type="text"
-                    id="living_expenses"
-                    value={formData.living_expenses}
+                    id="interests"
+                    value={formData.interests}
                     onChange={handleChange}
                 />
-                <br></br>
-                <label htmlFor="bills">Bills</label>
+
+                <label htmlFor="profile_pic">Profile Pic</label>
                 <input
                     type="text"
-                    id="bills"
-                    value={formData.bills}
+                    id="profile_pic"
+                    value={formData.profile_pic}
                     onChange={handleChange}
                 />
-                <br></br>
-                <label htmlFor="entertainment">Entertainment </label>
-                <input
-                    type="text"
-                    id="entertainment"
-                    value={formData.entertainment}
-                    onChange={handleChange}
-                />
-                <br></br>
-                <br></br>
+                {/* 
+            <label htmlFor="entertainment">Entertainment</label>
+            <input
+                type="text"
+                id="entertainment"
+                value={formData.entertainment}
+                onChange={handleChange} /> */}
+
                 <button type="submit">Add Profile</button>
             </form>
         </div>
-
     )
 
 }

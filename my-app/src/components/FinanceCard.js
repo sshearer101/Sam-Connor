@@ -1,38 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 
-function FinanceCard({ userInfo, onAddProfile }) {
-    
-     const { name, age, income, housing, living_expenses, bills, entertainment } = userInfo
-            //destructure doesn't work atm
-    // console.log(userInfo)
-    //Functions to display
-    //const expenses = housing + living_expenses + bills + entertainment
+function FinanceCard({
+    id,
+    name,
+    age,
+    income,
+    occupation,
+    interests,
+    profile_pic,
 
-    //Returns Output. Returns Advice
+}) {
 
-    //Red Yellow Green (As far as where User is financially)
-            //Red recommend 2nd Job, cutting consumption
-            //Yellow Easier Fix cutting unecessary spending
-            //Green Sitting good. Recommend investing to grow wealth
-                    //Younger: Investing
-                    //Older: Maybe enjoy life - Vacation etc.
+    const [likes, setLikes] = useState(0)
+    const [comments, setComments] = useState("")
+
+    function increaseLikes() {
+        setLikes(likes + 1)
+    }
+
+    function decreaseLikes() {
+        setLikes(likes - 1)
+    }
+
+    // function handleSubmit(event){
+    //     event.preventDefault();
+    //     fetch("http://localhost:3000/information", {
+    //         method: "POST",
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(comments),
+    //       });
+    //     }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        setComments(...comments, e)
+    }
+
+    function addComment(comment) {
+        setComments(...comments, comment)
+    }
 
     return (
-        <div className="form-card">
-            {userInfo.map(user => console.log(user))}
+        <div className="card">
+            <div className="card-info">
+                <br></br>
+                <img src={profile_pic} alt="profile_pic"></img>
+                <h3>{name}</h3>
+                <h3>{age} years old</h3>
+                <h3>${income}</h3>
+                <h3>{occupation}</h3>
+                <h3>{interests}</h3>
+            </div>
+            <div className="like-button" id="like-button">
+                <button onClick={increaseLikes} className="like-button" id="like-button"> 👍 </button>
+                <button onClick={decreaseLikes} className="like-button" id="like-button"> 👎 </button>
+                <span id="send-likes" className="send-likes"> {likes} Profile Likes</span>
+            </div>
+            <form >
+                <input
+                    className="input-container"
+                    type="text"
+                    placeholder="comment on profile"
+                    value={comments}
+                    onChange={(e) => setComments(e.target.value)}
+                />
+                <button
+                    onSubmit={handleSubmit}
+                    type="submit">
+                    Submit
+                </button>
 
+            </form>
 
-            {/* {userInfo} */}
-            {/* <h2>{name}</h2>
-            <h2>{age}</h2>
-            <h2>{income}</h2>
-            <h2>{housing}</h2>
-            <h2>{living_expenses}</h2>
-            <h2>{bills}</h2>
-            <h2>{entertainment}</h2> */}
-            {/* <h3> {{income} - expenses} </h3> */}
         </div>
+
     )
+
 }
 
-export default FinanceCard;
+export default FinanceCard
