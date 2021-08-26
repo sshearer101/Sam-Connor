@@ -1,24 +1,24 @@
 import React from "react";
 
 function FinanceCard({ 
-    // name, 
-    // age, 
-    // income, 
-    // housing, 
-    // living_expenses, 
-    // bills, 
-    // entertainment 
-
-    accountInfo
-}){
+    id, 
+    name, 
+    age, 
+    income, 
+    rent, 
+    housing, 
+    living_expenses, 
+    bills, 
+    entertainment  }){
     
-    console.log(accountInfo)
+// const { name, age, income, housing, living_expenses, bills, entertainment } = data
 // const {age, income, housing, living_expenses, bills, entertainment} = data
 
+console.log()
     return (
         <div className="card">
-            {/* <h3>{age}</h3>
-            <h3> {income - housing} </h3> */}
+            <h3>{name}</h3>
+            <h2>{age}</h2>
         </div>
     )
         

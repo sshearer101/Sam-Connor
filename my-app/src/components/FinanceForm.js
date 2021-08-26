@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function FinanceForm({ addProfile, cardData }) {
+function FinanceForm({ addProfile }) {
     const [formData, setFormData] = useState({
         
         name: "",
@@ -17,7 +17,6 @@ function FinanceForm({ addProfile, cardData }) {
     function handleSubmit(e){
         e.preventDefault();
       addProfile(formData)
-      cardData(formData)
     }
 
 

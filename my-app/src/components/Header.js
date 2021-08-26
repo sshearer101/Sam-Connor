@@ -5,13 +5,9 @@ function Header() {
 
     const [user, setUser] = useState(null)
 
-
-
     function handleLoginClick() {
         setUser(true)
-
     }
-
 
     function handleLogoutClick() {
         setUser(null)
