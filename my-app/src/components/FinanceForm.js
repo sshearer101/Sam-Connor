@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function FormList({ addProfile, getNextId}) {
+function FinanceForm({ addProfile, cardData }) {
     const [formData, setFormData] = useState({
         
         name: "",
@@ -17,6 +17,7 @@ function FormList({ addProfile, getNextId}) {
     function handleSubmit(e){
         e.preventDefault();
       addProfile(formData)
+      cardData(formData)
     }
 
 
@@ -110,4 +111,4 @@ function FormList({ addProfile, getNextId}) {
 
 }
 
-export default FormList;
+export default FinanceForm;

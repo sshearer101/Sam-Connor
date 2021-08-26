@@ -2,10 +2,10 @@ import React, {useState} from "react"
 
 
 
-function Login({ createForm }){
+function Login(){
 
     const [loginInfo, setLoginInfo] = useState({
-        id: "3",
+        id: "",
         name: "",
         username: "",
         password: "",
