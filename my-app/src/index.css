@@ -6,7 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.FormPage {
 
+   border-style: dotted;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -56,18 +59,34 @@ header {
 }
 
 img {
-  width: 250px;
-  height: 175px;
+  width: 350px;
+  height: 210px;
 
 }
 
-img.center {
+.card-detail {
+  border-style: dotted;
+}
+
+.img-container {
+  justify-content: center;
+}
+/* img.center {
     display: block;
     margin: 0 auto;
-}
+} */
 
 .like-button {
   margin: center;
+}
+
+.ui.grid > .row.bot-army-row {
+  flex-wrap: nowrap;
+  min-height: 100%;
+}
+
+.ui.grid {
+  padding: 0px 20px;
 }
 
 .log-buttons {
@@ -98,7 +117,7 @@ form {
     align-items: center;
     border-style: groove;
     padding: 5.0rem;
-    background-color: rgb(149, 151, 155);
+    background-color: cornflowerblue;
     border-color: black;
 }
 

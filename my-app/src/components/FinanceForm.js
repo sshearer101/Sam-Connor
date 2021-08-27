@@ -26,6 +26,16 @@ function FinanceForm({ addProfile }) {
             .then((formData) => {
                 addProfile(formData);
             });
+        //Clear out input values upon form submission using formDataSetter
+        setFormData({
+            // key / value pairs to update
+            name: "",
+            age: "",
+            income: "",
+            occupation: "",
+            interests: "",
+            profile_pic: ""
+        });
     }
 
 
@@ -38,32 +48,10 @@ function FinanceForm({ addProfile }) {
             [key]: value
         })
     }
-    // function handleSubmit(event) {
-    //     let newId = parseInt(cards[cards.length - 1].id) + 1;
-    //     // let newId = cards.length + 1;
-
-    //     // Prevent default form submission behavior
-    //     event.preventDefault();
-
-    //     // Create newCard JS object with formData and generate
-    //     // a unique ID for each new object
-    //     const newCard = {
-    //         id: newId,
-    //         title: formData.title,
-    //         content: formData.content
-    //         // ...formData
-    //     }
-
+    
     //     // Use handleAddCard from props to add the newCard JS object
     //     // to the existing array of Card objects (cards)
     //     addProfile(newCard);
-
-    //     // Clear out input values upon form submission using formDataSetter
-    //     setFormData({
-    //         // key / value pairs to update
-    //         title: "",
-    //         content: ""
-    //     });
     // }
 
 

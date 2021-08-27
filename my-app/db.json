@@ -10,24 +10,13 @@
       "profile_pic": "https://imgflip.com/s/meme/Matrix-Morpheus.jpg"
     },
     {
-      "name": "connor",
-      "age": "",
-      "income": "",
-      "occupation": "",
-      "interests": "",
-      "profile_pic": "",
-      "entertainment": "",
+      "name": "Tony",
+      "age": "34",
+      "income": "230,000",
+      "occupation": "Doctor",
+      "interests": "Golf",
+      "profile_pic": "https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
       "id": 2
-    },
-    {
-      "name": "sdf",
-      "age": "",
-      "income": "",
-      "occupation": "",
-      "interests": "",
-      "profile_pic": "",
-      "entertainment": "",
-      "id": 3
     }
   ]
 }

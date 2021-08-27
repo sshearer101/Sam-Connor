@@ -45,13 +45,17 @@ function FinanceCard({
     return (
         <div className="card">
             <div className="card-info">
-                <br></br>
-                <img src={profile_pic} alt="profile_pic"></img>
-                <h3>{name}</h3>
-                <h3>{age} years old</h3>
-                <h3>${income}</h3>
-                <h3>{occupation}</h3>
-                <h3>{interests}</h3>
+                <div className="img-container">
+                    <img src={profile_pic} alt="profile_pic"></img>
+                </div>
+                <div className="card-detail">
+                    {/* <img src={profile_pic} alt="profile_pic"></img> */}
+                    <h3>{name}</h3>
+                    <h3>{age} years old</h3>
+                    <h3>${income}</h3>
+                    <h3>{occupation}</h3>
+                    <h3>{interests}</h3>
+                </div>
             </div>
             <div className="like-button" id="like-button">
                 <button onClick={increaseLikes} className="like-button" id="like-button"> 👍 </button>
@@ -62,7 +66,7 @@ function FinanceCard({
                 <input
                     className="input-container"
                     type="text"
-                    placeholder="comment on profile"
+                    placeholder="Leave a Comment"
                     value={comments}
                     onChange={(e) => setComments(e.target.value)}
                 />

@@ -33,11 +33,11 @@ function App() {
         <Router>
             <div className="FormPage">        
                 <header className="app-header">
-                    <Link to="/">MAIN</Link>
+                    <Link to="/">Create Account</Link>
                     |
-                    <Link to="/financeform">FORM</Link>
+                    <Link to="/financeform">Form</Link>
                     |
-                    <Link to="/financelist">LIST</Link>
+                    <Link to="/financelist">List</Link>
                 </header>
                 <main>
                 <Switch>

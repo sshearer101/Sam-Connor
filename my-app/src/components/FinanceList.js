@@ -7,6 +7,7 @@ function FinanceList({ data }) {
             <br />
 
             {[...data].map(formInfo => {
+                <br></br>
                 return (
                     <FinanceCard
                         key={formInfo.id}
@@ -20,6 +21,7 @@ function FinanceList({ data }) {
                 );
             })}
         </div>
+
     )
 }
 
