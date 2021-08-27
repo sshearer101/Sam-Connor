@@ -23,21 +23,15 @@ function App() {
         setData([...data, dataProfile])
     }
 
-
-    // function handleSubmit(comment){
-    //   setComments([...comments, comment])
-    // }
-
-
     return (
         <Router>
             <div className="FormPage">        
                 <header className="app-header">
-                    <Link to="/">Create Account</Link>
+                    <Link to="/">  Create Account  </Link>
                     |
-                    <Link to="/financeform">Form</Link>
+                    <Link to="/financeform">  Form  </Link>
                     |
-                    <Link to="/financelist">List</Link>
+                    <Link to="/financelist">  List  </Link>
                 </header>
                 <main>
                 <Switch>

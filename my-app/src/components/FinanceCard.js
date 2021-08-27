@@ -38,9 +38,9 @@ function FinanceCard({
         setComments(...comments, e)
     }
 
-    function addComment(comment) {
-        setComments(...comments, comment)
-    }
+    // function addComment(comment) {
+    //     setComments(...comments, comment)
+    // }
 
     return (
         <div className="card">

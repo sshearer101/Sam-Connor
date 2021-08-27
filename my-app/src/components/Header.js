@@ -15,15 +15,21 @@ function Header() {
 
     return (
         <header>
-            <h1> Socialize Financially! </h1>
+            <div id="header">
+                <img id="header-img"
+                    src="https://i.pinimg.com/originals/48/eb/e7/48ebe7dffa5091a6d53fa2d7f14c7b24.png"
+                    class="center"
+                    alt="header-img"
+                    />
+            </div>
             <nav>
                 <div className="log-buttons">
                     {user ? (
-                        <button onClick={handleLogoutClick}>Logout</button>
+                        <button className="l-button" onClick={handleLogoutClick}>Logout</button>
                     ) : (
                         <div>
                             <Login />
-                            <button onClick={handleLoginClick}>Login </button>
+                            <button className="l-button"onClick={handleLoginClick}>Login </button>
                         </div>
                     )}
                 </div>

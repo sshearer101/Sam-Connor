@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.FormPage {
 
+.FormPage {
    border-style: dotted;
 }
 code {
@@ -48,9 +48,12 @@ header {
 .card {
    border-style: groove;
    border-color: black;
-   width: 60%;
+   width: 40%;
    margin: auto;
    padding: 5.0rem;
+   margin-bottom: 10px;
+   background-color: rgb(184, 242, 255);
+   /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAcALpAcJtHKHqP8tervuIn-uR1z25DJHsA&usqp=CAU"); */
    
 }
 
@@ -66,18 +69,61 @@ img {
 
 .card-detail {
   border-style: dotted;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 20px;
+  background-color: white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAcALpAcJtHKHqP8tervuIn-uR1z25DJHsA&usqp=CAU");
+  color: white;
+
+  /* line-height: 50% */
+  /* padding: 1em */
 }
+ 
+#header-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100%;
+}
+/* .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
 
 .img-container {
-  justify-content: center;
+  /* margin: auto; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 52.5%;
+  margin-bottom: 20px;
+  /* justify-content: center; */
 }
+
 /* img.center {
     display: block;
     margin: 0 auto;
 } */
 
+.send-likes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  text-align: center;
+}
+
 .like-button {
-  margin: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-bottom: 10px;
+
 }
 
 .ui.grid > .row.bot-army-row {
@@ -89,9 +135,25 @@ img {
   padding: 0px 20px;
 }
 
+.app-header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  font-size: 25px;
+}
 .log-buttons {
-  /* margin: auto; */
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.l-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 .finance-card {
     width: 40%;
@@ -105,9 +167,8 @@ img {
     background-color: rgb(149, 151, 155);
     border-style: groove;
     border-color: black;
-
+    margin-bottom: 10px;
 }
-
 form {
     width: 40%;
     margin: auto;
