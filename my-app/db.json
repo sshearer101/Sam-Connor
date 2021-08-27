@@ -7,7 +7,11 @@
       "income": 80000,
       "occupation": "Software Developer",
       "interests": "computers",
-      "profile_pic": "https://imgflip.com/s/meme/Matrix-Morpheus.jpg"
+      "profile_pic": "https://imgflip.com/s/meme/Matrix-Morpheus.jpg",
+      "comments": [
+        "sample comment 1",
+        "sample comment 2"
+      ]
     }
   ]
 }

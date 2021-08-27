@@ -1,6 +1,7 @@
 import React from "react";
 
-function CommentCard({  }){
+function CommentCard({ comments }){
+
     return (
         <ul>
            {/* {comments.map(comment => {

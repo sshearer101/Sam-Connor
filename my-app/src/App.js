@@ -12,7 +12,13 @@ import {
 
 function App() {
 
+  const headers = {
+    Accepts: 'application/json',
+    'Content-type': 'application/json',
+  };
+
   const [data, setData] = useState([])
+  const [comments, setComments] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3000/Information")
@@ -22,6 +28,23 @@ function App() {
 
   function addProfile(dataProfile) {
     setData([...data, dataProfile])
+  }
+
+  // function addComment(comment) {
+  //   fetch("http://localhost:3000/Information", {
+  //     method: 'POST',
+  //     body: JSON.stringify(comment),
+  //     headers,
+  //   })
+  //     .then((res) => res.json())
+  //     .then((json) => setComments([...comments, json]));
+  // }
+  // function addComment(id){
+  //   setComments(comments.map(comment => comment.id === id))
+  // }
+
+  function addComment(comment){
+    console.log(comment, "in App")
   }
 
   return (
@@ -46,7 +69,7 @@ function App() {
           </Route>
 
           <Route path="/List">
-            < FinanceList data={data} />
+            < FinanceList data={data} addComment={addComment} />
           </Route>
 
         </Switch>

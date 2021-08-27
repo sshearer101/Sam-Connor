@@ -9,11 +9,12 @@ function FinanceCard({
     occupation,
     interests,
     profile_pic,
-
+    comments,
+    addComments
 }) {
 
     const [likes, setLikes] = useState(0)
-    const [comments, setComments] = useState("")
+    const [comment, setComment] = useState("")
 
     function increaseLikes() {
         setLikes(likes + 1)
@@ -35,8 +36,8 @@ function FinanceCard({
     //     }
 
 
-    function addComment(content) {
-        setComments(...comments, content)
+    function handleComment() {
+        addComments(comment)
     }
 
     return (
@@ -49,29 +50,32 @@ function FinanceCard({
                 <h2>{interests}</h2>
                 <img src={profile_pic} alt="profile_pic"></img>
             </main>
+            <ul>
+                {comments.map(comment =>
+                    <li> {comment} </li>
+                )}
+            </ul>
             <button onClick={increaseLikes} className="like-button" id="like-button"> 👍 </button>
             <button onClick={decreaseLikes} className="like-button" id="like-button"> 👎 </button>
             <span id="send-likes" className="send-likes"> {likes} Profile Likes</span>
 
             <div className="comment-form">
                 <input
-                    onChange={(e) => setComments(e.target.value)}
+                    onChange={(e) => setComment(e.target.value)}
                     className="comment-input"
                     type="text"
-                    value={comments}
+                    value={comment}
                     placeholder="Comment on profile"
                 />
                 <button
                     className="comment-button"
-                    onClick={() => {
-                        addComment(comments);
-                        setComments('');
-                    }}
+                    onClick={handleComment}
                 >
                     Post
                 </button>
             </div>
-            < CommentCard comments={setComments}/>
+        
+
         </div>
     
     )
